@@ -35,7 +35,8 @@ app.use("/api/v1", product);
 // console.log('Connected to MongoDB!!!')
 // })
  
-const port=process.env.port||4000;
+
+const port=process.env.PORT||4000;
 
 
 const server = app.listen(port,()=>{
