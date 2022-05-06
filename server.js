@@ -40,7 +40,7 @@ const port=process.env.port||4000;
 
 const server = app.listen(port,()=>{
 
-    console.log(`server is working on http://localhost:${port}`)
+    console.log(`server is working on http://localhost:4000`)
 
 
 });
