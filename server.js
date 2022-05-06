@@ -38,9 +38,9 @@ app.use("/api/v1", product);
 const port=process.env.port||4000;
 
 
-const server = app.listen(port,()=>{
+const server = app.listen(process.env.port||4000,()=>{
 
-    console.log(`server is working on http://localhost:4000`)
+    console.log(`server is working on http://localhost:${process.env.port||4000}`)
 
 
 });
