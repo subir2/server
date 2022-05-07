@@ -4,6 +4,7 @@ const dotenv=require("dotenv");
 const product = require("./routes/productRoute");
 const mongoose = require("mongoose");
 const cloudinary = require("cloudinary");
+const cors=require("cors");
 dotenv.config();
 
 require("dotenv").config({ path: "config/config.env" });
