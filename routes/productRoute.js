@@ -13,7 +13,7 @@ router.route("/product/:id").put(updateProduct).delete(deleteProduct).get(getPro
 router.route("/review").put(isAuthenticatedUser, createProductReview);
 router
   .route("/admin/products")
-  .get(isAuthenticatedUser, authorizeRoles("admin"), getAdminProducts);
+  .get(isAuthenticatedUser,authorizeRoles("admin"), getAdminProducts);
 
   router
   .route("/admin/product/:id")
