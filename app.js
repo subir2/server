@@ -9,7 +9,9 @@ const path = require("path");
 const app=express();
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({ origin: true, credentials: true }));
+app.use(cors({
+    origin: '*'
+}));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(fileUpload());
 const product = require("./routes/productRoute");
