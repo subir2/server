@@ -13,15 +13,6 @@ app.use(cors({
     origin: '*'
 }));
 
-app.use(express.session({
-    secret : 'somesecret',
-
-    cookie : {
-        secure : true, // it works without the secure flag (cookie is set)
-        proxy : true,  // tried using this as well, no difference
-        maxAge: 5184000000 // 2 months
-    }
-}));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(fileUpload());
