@@ -14,12 +14,19 @@ const sendToken = (user, statusCode, res) => {
       httpOnly: true,
 
     };
-  
+    window.localStorage.setItem('token', token);
     res.status(statusCode).json({
       success: true,
       user,
       token,
     });
+
+
+    // res.status(statusCode).json({
+    //   success: true,
+    //   user,
+    //   token,
+    // });
   };
   
   module.exports = sendToken;
