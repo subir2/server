@@ -10,9 +10,9 @@ const app=express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    credentials: true,
-   origin: ['http://localhost:3000', 'https://cryptic-eyrie-92448.herokuapp.com/'] 
+    origin: '*'
 }));
+
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
