@@ -14,7 +14,7 @@ const sendToken = (user, statusCode, res) => {
       httpOnly: true,
 
     };
-    window.localStorage.setItem('token', token);
+  
     res.status(statusCode).json({
       success: true,
       user,
