@@ -6,9 +6,7 @@ var cookies = require("cookie-parser");
 exports.isAuthenticatedUser = catchAsyncErrors(async (req, res, next) => {
    const token = req.headers["authorization"];
  
- 
-
-  if (!token) {
+if (!token) {
     return next(new ErrorHander("Please Login to access this resource", 401));
   }
 

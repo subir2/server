@@ -7,7 +7,7 @@ router.route("/products").get(getAllProducts);
 
   router
   .route("/admin/product/new")
-  .post(isAuthenticatedUser, authorizeRoles("admin"), createProduct);
+  .post( authorizeRoles("admin"), createProduct);
 
 router.route("/product/:id").put(updateProduct).delete(deleteProduct).get(getProductDetails);
 router.route("/review").put(isAuthenticatedUser, createProductReview);
